@@ -1,0 +1,44 @@
+float x;
+float y;
+float easing = 0.05;
+
+void setup() {
+  size(1000, 1000); 
+  noStroke();  
+
+}
+
+void draw() { 
+  background(51);
+  
+  float targetX = mouseX;
+  float dx = targetX - x;
+  x += dx * easing;
+  
+  float targetY = mouseY;
+  float dy = targetY - y;
+  y += dy * easing;
+  
+    text("press q to make it black", width/2, height/2);
+  text("press w to make it white", width/2, height/2+10);
+  text("press e to make it random colour", width/2, height/2+20);
+  
+  ellipse(x, y, 66, 66);
+  fill(random(0,255),random(0,255),random(0,255));
+  
+
+if (key == 'q'||key=='Q')
+
+{ fill (0,0,0);
+}
+
+if (key == 'W'||key=='w')
+
+{ fill (255,255,255);
+}
+
+if (key == 'e'||key=='E')
+
+{ fill (random(0,255),random(0,255),random(0,255));
+}
+}
