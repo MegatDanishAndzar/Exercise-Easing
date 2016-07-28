@@ -4,6 +4,7 @@ float easing = 0.05;
 
 void setup() {
   size(1000, 1000); 
+  // I changed the size aof the background
   noStroke();  
 
 }
@@ -19,6 +20,8 @@ void draw() {
   float dy = targetY - y;
   y += dy * easing;
   
+  //I put text to ease the user to interact with the code
+  
     text("press q to make it black", width/2, height/2);
   text("press w to make it white", width/2, height/2+10);
   text("press e to make it random colour", width/2, height/2+20);
@@ -26,6 +29,7 @@ void draw() {
   ellipse(x, y, 66, 66);
   fill(random(0,255),random(0,255),random(0,255));
   
+  //below this is the code for key pressed
 
 if (key == 'q'||key=='Q')
 
